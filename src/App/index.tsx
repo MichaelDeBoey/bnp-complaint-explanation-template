@@ -1,4 +1,4 @@
-import React, {ComponentProps, FunctionComponent, useEffect, useState} from 'react';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 
 import { Form } from './Form';
 import { Intro } from './Intro';
@@ -6,12 +6,8 @@ import { Pattern } from './Pattern';
 import { SocialLinks } from './SocialLinks';
 import { Template } from './Template';
 
-type TemplateDetails = Omit<ComponentProps<typeof Template>, 'children'>;
 export const App: FunctionComponent = () => {
-  const [
-    templateDetails,
-    setTemplateDetails,
-  ] = useState<TemplateDetails | null>(null);
+  const [showTemplate, setShowTemplate] = useState(false);
 
   useEffect(() => {
     fetch('/.netlify/functions/trackPageViewed');
@@ -26,10 +22,10 @@ export const App: FunctionComponent = () => {
 
         <Intro />
 
-        {templateDetails ? (
-          <Template {...templateDetails} />
+        {showTemplate ? (
+          <Template />
         ) : (
-          <Form onSubmit={setTemplateDetails} />
+          <Form onSubmit={() => setShowTemplate(true)} />
         )}
 
         <SocialLinks />
