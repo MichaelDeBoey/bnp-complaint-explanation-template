@@ -1,4 +1,4 @@
-# BNP Paribas Fortis complaint generator
+# BNP Paribas Fortis complaint explanation template
 
 We all love to have some cake 🍰. Unfortunately [BNP Paribas Fortis
 doesn't][bnp-response]. 😢

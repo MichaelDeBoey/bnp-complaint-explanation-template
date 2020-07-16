@@ -1,5 +1,5 @@
 {
-  "name": "bnp-complaint-generator",
+  "name": "bnp-complaint-explanation-template",
   "description": "Let's urge BNP Paribas Fortis to develop a working PSD 2 interface (API), so we all can have some Cake! 💪",
   "version": "0.1.0",
   "private": true,
@@ -7,12 +7,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MichaelDeBoey/bnp-complaint-generator"
+    "url": "https://github.com/MichaelDeBoey/bnp-complaint-explanation-template"
   },
   "bugs": {
-    "url": "https://github.com/MichaelDeBoey/bnp-complaint-generator/issues"
+    "url": "https://github.com/MichaelDeBoey/bnp-complaint-explanation-template/issues"
   },
-  "homepage": "https://bnp-complaint-generator.netlify.app",
+  "homepage": "https://bnp-complaint-explanation-template.netlify.app",
   "dependencies": {
     "@tailwindcss/ui": "^0.3.1",
     "@types/airtable": "^0.8.0",
