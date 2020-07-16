@@ -34,6 +34,33 @@ export const Intro: FunctionComponent = () => (
     </Paragraph>
 
     <Paragraph>
+      After filing an official complaint (using the{' '}
+      <Link href="https://bnp-complaint-generator.netlify.app">
+        BNP Paribas Fortis complaint generator
+      </Link>
+      ), I got the following{' '}
+      <Link href="./response.jpg" target="_blank">
+        response
+      </Link>
+      :
+    </Paragraph>
+
+    <Paragraph>
+      <Link href="./response.jpg" target="_blank" underline={false}>
+        <img className="inline max-w-xs" src="./response.jpg" />
+      </Link>
+      <br />
+      <span className="mt-4 leading-6 text-gray-500 text-sm">
+        (Click the image to see a larger version)
+      </span>
+    </Paragraph>
+
+    <Paragraph>
+      This template can be used as a more in depth explanation to the
+      complaint.
+    </Paragraph>
+
+    <Paragraph>
       Let's urge BNP Paribas Fortis to develop a working{' '}
       <Link href="https://ec.europa.eu/info/law/payment-services-psd-2-directive-eu-2015-2366_en">
         PSD 2
@@ -42,17 +69,6 @@ export const Intro: FunctionComponent = () => (
       <span role="img" aria-label="strong arm">
         💪
       </span>
-    </Paragraph>
-
-    <Paragraph>
-      Fill in your details and send the generated template to{' '}
-      <Link
-        href="mailto:complaints.management@bnpparibasfortis.com?subject=Klanten klacht [CLIENT ID] PSD 2 API (gelinkt aan KQ10440226)"
-        onClick={() => fetch('/.netlify/functions/trackEmailAddressClicked')}
-      >
-        complaints.management@bnpparibasfortis.com
-      </Link>
-      .
     </Paragraph>
 
     <Paragraph fontSize="small">

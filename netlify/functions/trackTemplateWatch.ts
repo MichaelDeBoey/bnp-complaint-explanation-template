@@ -1,16 +1,16 @@
 import Airtable from 'airtable';
 
-// Watch the data at https://airtable.com/invite/l?inviteId=invzCfGkI9UTBRhiL&inviteToken=58b6a62a8bd8b03245d6c286c43199fdc0ba67f5db1be4f208e776863a97ef1e
+// Watch the data at https://airtable.com/invite/l?inviteId=inve1Ui0j3bOYrOJc&inviteToken=8460aa4c90c33dde240dc7f21d19ce25569d092b0eba3382340dffb888e5d6e8
 const base = new Airtable({
   apiKey: process.env.AIRTABLE_API_KEY,
-}).base('appMqQ4vZMxQrUeXT');
+}).base('appMiBqG69pVI8YtQ');
 
 export const handler = async () => {
   if (process.env.NODE_ENV !== 'production') {
     return { statusCode: 204 };
   }
 
-  return base('EmailAddressClicked')
+  return base('WatchTemplateClicked')
     .create({})
     .then((createdRecord) => ({
       statusCode: 200,
