@@ -1,0 +1,63 @@
+{
+  "name": "bnp-complaint-generator",
+  "description": "Let's urge BNP Paribas Fortis to develop a working PSD 2 interface (API), so we all can have some Cake! 💪",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Michaël De Boey <info@michaeldeboey.be> (https://michaeldeboey.be)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MichaelDeBoey/bnp-complaint-generator"
+  },
+  "bugs": {
+    "url": "https://github.com/MichaelDeBoey/bnp-complaint-generator/issues"
+  },
+  "homepage": "https://bnp-complaint-generator.netlify.app",
+  "dependencies": {
+    "@tailwindcss/ui": "^0.3.1",
+    "@types/airtable": "^0.8.0",
+    "@types/node": "^14.0.23",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "airtable": "^0.8.1",
+    "autoprefixer": "^9.8.5",
+    "dotenv-cli": "^3.2.0",
+    "http-proxy-middleware": "^1.0.5",
+    "netlify-lambda": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "tailwindcss": "^1.5.1",
+    "typescript": "^3.9.6"
+  },
+  "scripts": {
+    "prebuild": "NODE_ENV=production npm run generate:css",
+    "build": "run-p build:**",
+    "build:app": "react-scripts build",
+    "build:functions": "netlify-lambda build netlify/functions",
+    "generate:css": "postcss src/index.css -o src/index.generated.css",
+    "start": "run-p start:**",
+    "start:app": "react-scripts start",
+    "start:css": "npm run generate:css -- -w",
+    "start:functions": "NODE_ENV=development dotenv netlify-lambda serve netlify/functions"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
