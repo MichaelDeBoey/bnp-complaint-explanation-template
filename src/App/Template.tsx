@@ -3,7 +3,7 @@ import type { FunctionComponent } from 'react';
 import { Paragraph } from './Paragraph';
 
 export const Template: FunctionComponent = () => (
-  <div className="border-t mt-8 pt-8">
+  <div className="mt-8 border-t pt-8">
     <Paragraph>Beste,</Paragraph>
 
     <Paragraph>

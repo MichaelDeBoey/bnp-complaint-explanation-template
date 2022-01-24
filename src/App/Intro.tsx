@@ -4,7 +4,7 @@ import { Link } from './Link';
 import { Paragraph } from './Paragraph';
 
 const Title: FunctionComponent = ({ children }) => (
-  <h2 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+  <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
     {children}
   </h2>
 );
@@ -54,7 +54,7 @@ export const Intro: FunctionComponent = () => (
         />
       </Link>
       <br />
-      <span className="mt-4 leading-6 text-gray-500 text-sm">
+      <span className="mt-4 text-sm leading-6 text-gray-500">
         (Click the image to see a larger version)
       </span>
     </Paragraph>
