@@ -1,11 +1,15 @@
-import type { AnchorHTMLAttributes, FunctionComponent } from 'react';
+import type {
+  AnchorHTMLAttributes,
+  FunctionComponent,
+  PropsWithChildren,
+} from 'react';
 
 type AnchorType = AnchorHTMLAttributes<HTMLAnchorElement>;
 type Props = Required<Pick<AnchorType, 'href'>> &
   Pick<AnchorType, 'onClick' | 'target'> & {
     underline?: boolean;
   };
-export const Link: FunctionComponent<Props> = ({
+export const Link: FunctionComponent<PropsWithChildren<Props>> = ({
   children,
   href,
   onClick,
